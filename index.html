@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mūzikas Albumu Diagrammas</title>
+</head>
+<body>
+    {% if img_base64_1 and img_base64_2 %}
+        <h1>Atskaņojumu skaits katram māksliniekam</h1>
+        <img src="data:image/png;base64,{{ img_base64_1 }}" alt="Atskaņojumu skaits katram māksliniekam">
+        
+        <h1>Atskaņojumu skaita sadalījums</h1>
+        <img src="data:image/png;base64,{{ img_base64_2 }}" alt="Atskaņojumu skaita sadalījums">
+    {% else %}
+        <h1>Datubāzē nav datu.</h1>
+    {% endif %}
+</body>
+</html>
